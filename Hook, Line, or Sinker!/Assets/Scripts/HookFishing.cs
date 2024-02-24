@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class HookFishing : MonoBehaviour
@@ -10,7 +11,6 @@ public class HookFishing : MonoBehaviour
     public Rigidbody2D myRig;
     public float speed = 2f;
     public bool isReversing = false;
-    public float stopDistance = 0.5f; // Adjust as needed
     public float targetYPosition = -38.5f; 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +38,8 @@ public class HookFishing : MonoBehaviour
             speed *= -1f;
             //myRig.velocity *= -1f;
         }
-        
+        Vector2 mousePosition = Mouse.current.position.ReadValue();
+        Vector2 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        transform.position = new Vector2(worldMousePosition.x, transform.position.y);
     }
 }
