@@ -7619,7 +7619,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.53, y: -20.1, z: 0}
-  m_LocalScale: {x: 11.327457, y: 44.332623, z: 6.0397}
+  m_LocalScale: {x: 10.191767, y: 42.11599, z: 6.0397}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -7637,10 +7637,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxCollider: {fileID: 1759365190}
-  numberRandomPositions: 10
+  numberRandomPositions: 15
   prefabPool:
   - {fileID: 4224824453805760681, guid: 21ef392aeb8dd8b4482c637dad872631, type: 3}
   - {fileID: 1054812074615850898, guid: 4dc4680b6e0000d48ad374d33c3282df, type: 3}
+  - {fileID: 1888765918064033558, guid: 9b0548bb701052f429a89f4a04f1867a, type: 3}
+  - {fileID: 2070323675170993982, guid: c986779ea3c815941914e4cc68dd4057, type: 3}
+  - {fileID: 2288170569490935303, guid: dbfbe4e06c397a840bb5ebb220dbf496, type: 3}
 --- !u!61 &1759365190
 BoxCollider2D:
   m_ObjectHideFlags: 0
