@@ -7552,9 +7552,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 795bd68917da9e44bb44fdbfbb9977a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  polygonCollider: {fileID: 1759365190}
+  boxCollider: {fileID: 1759365190}
   numberRandomPositions: 10
-  prefab: {fileID: 4224824453805760681, guid: 21ef392aeb8dd8b4482c637dad872631, type: 3}
+  prefabPool:
+  - {fileID: 4224824453805760681, guid: 21ef392aeb8dd8b4482c637dad872631, type: 3}
+  - {fileID: 1054812074615850898, guid: 4dc4680b6e0000d48ad374d33c3282df, type: 3}
 --- !u!61 &1759365190
 BoxCollider2D:
   m_ObjectHideFlags: 0
