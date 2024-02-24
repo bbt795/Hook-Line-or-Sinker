@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3602576981564442904}
   - component: {fileID: 2162638076477497087}
   - component: {fileID: 5961725073908524531}
+  - component: {fileID: 5582607782557377362}
+  - component: {fileID: 6429618513758655732}
   m_Layer: 0
   m_Name: HookPlayer
   m_TagString: Untagged
@@ -119,3 +121,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36df86761115404a994447a9a902613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &5582607782557377362
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195072204966842157}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!68 &6429618513758655732
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195072204966842157}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.05467633, y: -0.041501634}
+  - {x: 0.009640945, y: -0.098498486}
+  - {x: 0.016422665, y: -0.14489534}
+  - {x: 0.05079897, y: -0.18360172}
+  - {x: 0.055759914, y: -0.35678843}
+  - {x: 0.016523723, y: -0.40839526}
+  - {x: -0.068248264, y: -0.4087422}
+  - {x: -0.14008702, y: -0.35984433}
+  - {x: -0.13638228, y: -0.43635046}
+  - {x: -0.08748386, y: -0.4663349}
+  - {x: -0.03473508, y: -0.4709041}
+  - {x: 0.040402632, y: -0.4571006}
+  - {x: 0.09654615, y: -0.41990542}
+  - {x: 0.100005105, y: -0.17961022}
+  - {x: 0.14450388, y: -0.112106316}
+  - {x: 0.1139123, y: -0.046088494}
+  - {x: 0.051497526, y: -0.046798088}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
