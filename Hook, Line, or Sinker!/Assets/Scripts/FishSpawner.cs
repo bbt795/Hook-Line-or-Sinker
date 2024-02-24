@@ -5,7 +5,7 @@ using UnityEngine;
 public class FishSpawner : MonoBehaviour
 {
     public Collider2D boxCollider;
-    public int numberRandomPositions = 10;
+    public int numberRandomPositions = 15;
 
     public List<GameObject> prefabPool;
 
