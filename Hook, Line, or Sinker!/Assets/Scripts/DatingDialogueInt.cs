@@ -14,6 +14,7 @@ public class DatingDialogueInt : MonoBehaviour
     public string fishDateName;
     public TextMeshProUGUI fishDialogueText;
     public bool startOptions = true;
+    public bool endOptions = false;
     public int currentDialogue = 2;
     public int choiceIndex1;
     public int choiceIndex2;
@@ -106,7 +107,8 @@ public class DatingDialogueInt : MonoBehaviour
     {
         if(!startOptions)
         {
-            fishDialogueText.text = responses.dialogue[currentDialogue - 4];
+            CheckAffinity(currentDialogue - 5);
+            fishDialogueText.text = responses.dialogue[currentDialogue - 5];
         }
         else
         {
@@ -130,7 +132,8 @@ public class DatingDialogueInt : MonoBehaviour
     {
         if(!startOptions)
         {
-            fishDialogueText.text = responses.dialogue[currentDialogue - 3];
+            CheckAffinity(currentDialogue - 4);
+            fishDialogueText.text = responses.dialogue[currentDialogue - 4];
         }
         else
         {
@@ -150,13 +153,15 @@ public class DatingDialogueInt : MonoBehaviour
 
     public void OnClickOption3()
     {
-        fishDialogueText.text = responses.dialogue[currentDialogue - 2];
+        CheckAffinity(currentDialogue - 3);
+        fishDialogueText.text = responses.dialogue[currentDialogue - 3];
         
     }
 
     public void OnClickOption4()
     {
-        fishDialogueText.text = responses.dialogue[currentDialogue - 1];
+        CheckAffinity(currentDialogue - 2);
+        fishDialogueText.text = responses.dialogue[currentDialogue - 2];
     }
 
     // public void ChoiceOnClick()
@@ -181,11 +186,78 @@ public class DatingDialogueInt : MonoBehaviour
 
     // }
 
-    public void ChoiceResponses(int num)
+    public void CheckAffinity(int num)
     {
+        if(fishDateName == "Basic Fish")
+        {
+            if(num == 1 || num == 6)
+            {
+                gameManager.GetComponent<DoNotDestroy>().affinity -= 10;
+            }
+            else if(num == 2 || num == 8 || num == 10)
+            {
+                gameManager.GetComponent<DoNotDestroy>().affinity += 5;
+            }
+            else if(num == 3 || num == 12)
+            {
+                gameManager.GetComponent<DoNotDestroy>().affinity -= 5;
+            }
+        }
+        else if(fishDateName == "Squid")
+        {
+            if(num == 1)
+            {
+                gameManager.GetComponent<DoNotDestroy>().affinity -= 10;
+            }
+            else if(num == 5 || num == 7 || num == 13)
+            {
+                gameManager.GetComponent<DoNotDestroy>().affinity += 5;
+            }
+            else if(num == 3 || num == 9 || num == 11)
+            {
+                gameManager.GetComponent<DoNotDestroy>().affinity -= 5;
+            }
+        }
+        else if(fishDateName == "Swordfish")
+        {
+            if(num == 1)
+            {
+                gameManager.GetComponent<DoNotDestroy>().affinity -= 10;
+            }
+            else if(num == 5 || num == 8 || num == 10)
+            {
+                gameManager.GetComponent<DoNotDestroy>().affinity += 5;
+            }
+            else if(num == 3 || num == 7 || num == 11)
+            {
+                gameManager.GetComponent<DoNotDestroy>().affinity -= 5;
+            }
+        }
+        DateEnd();
         //Add dialogue change based on option number?
         //fishDialogueText.text = responses.dialogue[];
 
+    }
+
+    public void DateEnd()
+    {
+        int affinity = gameManager.GetComponent<DoNotDestroy>().affinity;
+        if(affinity == 15)
+        {
+            fishDialogueText.text = player.dialogue[13];
+        }
+        else if(affinity == -10)
+        {
+            fishDialogueText.text = player.dialogue[0];
+        }
+        else if(affinity < 0 && affinity > -10 && endOptions)
+        {
+            fishDialogueText.text = player.dialogue[15];
+        }
+        else if(affinity > 0 && affinity < 15 && endOptions)
+        {
+            fishDialogueText.text = player.dialogue[14];
+        }
     }
 
     // Update is called once per frame
