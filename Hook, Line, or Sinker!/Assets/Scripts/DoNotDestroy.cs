@@ -9,6 +9,9 @@ public class DoNotDestroy : MonoBehaviour
 
     public List<string> fishList = new List<string>();
     public string fishDate;
+    public int fishCount = 0;
+    public int squidCount = 0;
+    public int swordCount = 0;
 
     private void Awake(){
         GameObject[] gameManagerObj = GameObject.FindGameObjectsWithTag("GameController");
