@@ -9,10 +9,8 @@ public class DateImageChange : MonoBehaviour
     public string fishDateName;
 
     public Sprite[] backgrounds;
-    public Sprite[] fishSprites;
     
     public Image dateBG;
-    public Image dateImage;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +19,7 @@ public class DateImageChange : MonoBehaviour
         fishDateName = gameManager.GetComponent<DoNotDestroy>().fishDate;
 
         //canvas = GameObject.Find("Canvas").GetComponent<Canvas>().transform.GetChild(0);
-        dateImage = transform.GetChild(0).GetComponent<Image>();
+        //dateImage = transform.GetChild(2).GetComponent<Image>();
 
         //dateBG = GameObject.Find("Panel").GetComponent<Image>(); //.sprite = backgrounds[currentSprite];
 
@@ -30,17 +28,14 @@ public class DateImageChange : MonoBehaviour
         if (fishDateName.StartsWith("BasicFish"))
         {
             dateBG.sprite = backgrounds[0];
-            dateImage.sprite = fishSprites[0];
         }
         else if (fishDateName.StartsWith("Squid"))
         {
             dateBG.sprite = backgrounds[1];
-            dateImage.sprite = fishSprites[1];
         }
         else if (fishDateName.StartsWith("Swordfish"))
         {
             dateBG.sprite = backgrounds[2];
-            dateImage.sprite = fishSprites[2];
         }
     }
 
