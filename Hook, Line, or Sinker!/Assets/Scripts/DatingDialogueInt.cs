@@ -16,6 +16,7 @@ public class DatingDialogueInt : MonoBehaviour
     public bool startOptions = true;
     public bool endOptions = false;
     public int currentDialogue = 2;
+    public int currentQuestion = 0;
     public int choiceIndex1;
     public int choiceIndex2;
     public int choiceIndex3;
@@ -103,16 +104,46 @@ public class DatingDialogueInt : MonoBehaviour
         Option4.gameObject.SetActive(false);
 
     }
+    public void InBetweenDialogue(int response)
+    {
+        TextMeshProUGUI optionText = Option1.GetComponentInChildren<TextMeshProUGUI>(false);
+        optionText.text = "Continue";
+        fishDialogueText.text = responses.dialogue[response];
+        Option2.gameObject.SetActive(false);
+        Option3.gameObject.SetActive(false);
+        Option4.gameObject.SetActive(false);
+
+    }
     public void OnClickOption1()
     {
-        if(!startOptions)
+        TextMeshProUGUI optionInitialText = Option1.GetComponentInChildren<TextMeshProUGUI>(false);
+        // if(!startOptions)
+        // {
+        //     //CheckAffinity(currentDialogue - 5);
+        //     fishDialogueText.text = responses.dialogue[currentDialogue - 5];
+        // }
+        // else if()
+        // {
+        //     startOptions = false;
+        //     foreach(GameObject option in options)
+        //     {
+        //         if(!option.gameObject.activeSelf)
+        //         {
+        //             option.SetActive(true);
+        //         }
+        //         TextMeshProUGUI optionText = option.GetComponentInChildren<TextMeshProUGUI>(false);
+        //         optionText.text = player.dialogue[currentDialogue];
+        //         currentDialogue++;
+        //     }
+        // }
+        if(optionInitialText.text == "Continue" || startOptions)
         {
-            CheckAffinity(currentDialogue - 5);
-            fishDialogueText.text = responses.dialogue[currentDialogue - 5];
-        }
-        else
-        {
-            startOptions = false;
+            if(startOptions)
+            {
+                startOptions = false;  
+            }
+            currentQuestion++;
+            fishDialogueText.text = questions.dialogue[currentQuestion];
             foreach(GameObject option in options)
             {
                 if(!option.gameObject.activeSelf)
@@ -123,6 +154,11 @@ public class DatingDialogueInt : MonoBehaviour
                 optionText.text = player.dialogue[currentDialogue];
                 currentDialogue++;
             }
+
+        }
+        else
+        {
+            InBetweenDialogue(currentDialogue - 5);  
         }
         
 
@@ -130,38 +166,39 @@ public class DatingDialogueInt : MonoBehaviour
 
     public void OnClickOption2()
     {
-        if(!startOptions)
-        {
-            CheckAffinity(currentDialogue - 4);
-            fishDialogueText.text = responses.dialogue[currentDialogue - 4];
-        }
-        else
-        {
-            startOptions = false;
-            foreach(GameObject option in options)
-            {
-                if(!option.gameObject.activeSelf)
-                {
-                    option.SetActive(true);
-                }
-                TextMeshProUGUI optionText = option.GetComponentInChildren<TextMeshProUGUI>(false);
-                optionText.text = player.dialogue[currentDialogue];
-                currentDialogue++;
-            }
-        } 
+        // if(!startOptions)
+        // {
+        //     //CheckAffinity(currentDialogue - 4);
+        //     InBetweenDialogue(currentDialogue - 4);
+        // }
+        // else
+        // {
+        //     startOptions = false;
+        //     foreach(GameObject option in options)
+        //     {
+        //         if(!option.gameObject.activeSelf)
+        //         {
+        //             option.SetActive(true);
+        //         }
+        //         TextMeshProUGUI optionText = option.GetComponentInChildren<TextMeshProUGUI>(false);
+        //         optionText.text = player.dialogue[currentDialogue];
+        //         currentDialogue++;
+        //     }
+        // } 
+        InBetweenDialogue(currentDialogue - 4);
     }
 
     public void OnClickOption3()
     {
-        CheckAffinity(currentDialogue - 3);
-        fishDialogueText.text = responses.dialogue[currentDialogue - 3];
-        
+        //CheckAffinity(currentDialogue - 3);
+        InBetweenDialogue(currentDialogue - 3);        
     }
 
     public void OnClickOption4()
     {
-        CheckAffinity(currentDialogue - 2);
-        fishDialogueText.text = responses.dialogue[currentDialogue - 2];
+        //CheckAffinity(currentDialogue - 2);
+        //fishDialogueText.text = responses.dialogue[currentDialogue - 2]
+        InBetweenDialogue(currentDialogue - 2);
     }
 
     // public void ChoiceOnClick()
