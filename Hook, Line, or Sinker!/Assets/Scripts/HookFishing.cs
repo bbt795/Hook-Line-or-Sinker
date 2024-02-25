@@ -7,12 +7,14 @@ using UnityEngine.InputSystem;
 public class HookFishing : MonoBehaviour
 {
     public Camera hookCamera;
+    public GameObject gameManager;
     public Animator myAnim;
     public SpriteRenderer myRenderer;
     public Rigidbody2D myRig;
     public Collider2D boxCollider;
-    public float speed = 2f;
+    public float speed = 3f;
     public bool isReversing = false;
+    public bool mouseMove = true;
     public float targetYPosition = -38.5f; 
     // Start is called before the first frame update
     void Start()
@@ -20,37 +22,40 @@ public class HookFishing : MonoBehaviour
         myAnim = this.GetComponent<Animator>();
         myRenderer = this.GetComponent<SpriteRenderer>();
         myRig = this.GetComponent<Rigidbody2D>();
+        gameManager = GameObject.FindGameObjectWithTag("GameController");
         
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Ground"))
+        if(other.gameObject.CompareTag("Fish"))
         {
-            Debug.Log("Spaghetti");
+            FishMove otherObject = other.gameObject.GetComponent<FishMove>();
+            gameManager.GetComponent<DoNotDestroy>().fishCount += 1;
+            Destroy(otherObject.gameObject);
+        }
+        else if(other.gameObject.CompareTag("Squid"))
+        {
+            FishMove otherObject = other.gameObject.GetComponent<FishMove>();
+            gameManager.GetComponent<DoNotDestroy>().squidCount += 1;
+            Destroy(otherObject.gameObject);
+        }
+        else if(other.gameObject.CompareTag("Swordfish"))
+        {
+            FishMove otherObject = other.gameObject.GetComponent<FishMove>();
+            gameManager.GetComponent<DoNotDestroy>().swordCount += 1;
+            Destroy(otherObject.gameObject);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Slow down/Reverse direction at -38.5 y
-       //Vector3 movement = Vector3.down * speed * Time.deltaTime;
 
-        // Move the object
-        //myRig.transform.Translate(movement);
-
-        // myRig.velocity = Vector2.down * speed;
-        // if (!isReversing && transform.position.y <= targetYPosition)
-        // {
-        //     isReversing = true;
-        //     // Reverse the direction
-        //     speed *= -1f;
-        //     //myRig.velocity *= -1f;
-        // }
         Vector2 mousePosition = Mouse.current.position.ReadValue();
         Vector2 worldMousePosition = hookCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        transform.position = new Vector2(worldMousePosition.x, transform.position.y);
-        Debug.Log(worldMousePosition.x);
+        worldMousePosition.y = transform.position.y;
+        //transform.position = new Vector2(worldMousePosition.x, transform.position.y);
+        transform.position = Vector3.MoveTowards(transform.position, worldMousePosition, speed*Time.deltaTime);
     }
 }

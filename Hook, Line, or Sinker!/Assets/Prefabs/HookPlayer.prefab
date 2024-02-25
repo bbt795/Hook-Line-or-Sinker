@@ -125,8 +125,10 @@ MonoBehaviour:
   myAnim: {fileID: 0}
   myRenderer: {fileID: 0}
   myRig: {fileID: 0}
+  boxCollider: {fileID: 163290378123865977}
   speed: 5
   isReversing: 0
+  mouseMove: 1
   targetYPosition: -38.5
 --- !u!50 &5582607782557377362
 Rigidbody2D:
@@ -154,7 +156,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6
 --- !u!61 &163290378123865977
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -187,7 +189,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.2547058}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -198,5 +200,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.28125, y: 0.9375}
+  m_Size: {x: 0.28125, y: 0.42808846}
   m_EdgeRadius: 0
