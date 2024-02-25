@@ -57,9 +57,9 @@ public class FishMove : MonoBehaviour
         currentMoveDirection = Mathf.FloorToInt(Random.Range(0, moveDirections.Length));
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.name == "Ground")
+        if (collision.gameObject.CompareTag("Ground"))
         {
             //Output the message
             Debug.Log("hit a wall");
