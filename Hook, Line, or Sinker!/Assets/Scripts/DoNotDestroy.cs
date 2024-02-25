@@ -30,5 +30,29 @@ public class DoNotDestroy : MonoBehaviour
     void Update()
     {
 
+        while(fishCount > 0)
+        {
+
+            fishList.Add("BasicFish" + Random.Range(1,4));
+            fishCount--;
+
+        }
+
+        while(squidCount > 0)
+        {
+
+            fishList.Add("Squid" + Random.Range(1, 4));
+            squidCount--;
+
+        }
+
+        while(swordCount > 0)
+        {
+
+            fishList.Add("Swordfish" + Random.Range(1, 4));
+            swordCount--;
+
+        }
+
     }
 }
