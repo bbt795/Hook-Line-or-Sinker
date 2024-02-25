@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c896c7d15f0eb47bbbd1d9cd2357e1, type: 3}
   m_Name: SwordfishQuestions
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - Good evening, my dear. Thank you for inviting me to a such a lovely place.
+  - Let's get to know each other better! What's your favorite color?
+  - If you suddenly won a million dollars, what would you do, my dear?
+  - Last question, my dear! Do you believe in destiny?

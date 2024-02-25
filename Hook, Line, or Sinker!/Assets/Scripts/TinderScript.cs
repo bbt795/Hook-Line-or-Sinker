@@ -89,6 +89,7 @@ public class TinderScript : MonoBehaviour
         {
 
             fishDate = fishList[0];
+            gameManager.GetComponent<DoNotDestroy>().fishDate = fishDate;
             fishList.Clear();
             SceneManager.LoadScene("DatingGame");
 
@@ -96,6 +97,7 @@ public class TinderScript : MonoBehaviour
         {
 
             fishDate = fishList[0];
+            gameManager.GetComponent<DoNotDestroy>().fishDate = fishDate;
             fishList.Clear();
             SceneManager.LoadScene("DatingGame");
 
@@ -103,6 +105,7 @@ public class TinderScript : MonoBehaviour
         {
 
             fishDate = fishList[0];
+            gameManager.GetComponent<DoNotDestroy>().fishDate = fishDate;
             fishList.Clear();
             SceneManager.LoadScene("DatingGame");
 

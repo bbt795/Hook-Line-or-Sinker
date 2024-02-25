@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c896c7d15f0eb47bbbd1d9cd2357e1, type: 3}
   m_Name: EccentricSquidQuestions
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - Good morrow! Our paths have crossed and its a pleasure to finally meet you.
+  - Praytell, for your artist of choice, who ignites the creative spark in your soul?
+  - If you could paint your lifes story, what colors would dominate the canvas?
+  - To bring our amorous meeting to a close, what would you title this fateful encounter?

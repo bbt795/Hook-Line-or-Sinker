@@ -13,19 +13,15 @@ MonoBehaviour:
   m_Name: SwordfishResponses
   m_EditorClassIdentifier: 
   dialogue:
-  - Good evening, my dear. Thank you for inviting me to a such a lovely place.
   - Sorry, it seems like I'm needed elsewhere...
-  - Let's get to know each other better! What's your favorite color?
   - A classic!
   - Can't say I feel the same...
   - That's a good choice.
   - That's my favorite, too! What a coincidence.
-  - If you suddenly won a million dollars, what would you do, my dear?
   - A wise investment!
   - That doesn't sound very financially stable...
   - How selfless of you, you must have a heart of gold!
   - Sounds fun! I wonder what sights you'll see.
-  - Last question, my dear! Do you believe in destiny?
   - I feel the same! Wow, I've never met anyone who is just as hopelessly romantic
     as me.
   - Oh... I see. How disappointing...
