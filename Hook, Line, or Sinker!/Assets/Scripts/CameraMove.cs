@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class CameraMove : MonoBehaviour
 {
-    public float speed = 2f;
+    public float speed = 3f;
     public bool isReversing = false;
     public float targetYPosition = -38.5f; 
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class CameraMove : MonoBehaviour
         {
             isReversing = true;
             // Reverse the direction
-            speed *= -1f;
+            speed *= -5f;
         }
     }
 }
