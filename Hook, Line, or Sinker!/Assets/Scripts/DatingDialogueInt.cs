@@ -185,37 +185,37 @@ public class DatingDialogueInt : MonoBehaviour
     {
         if(fishDateName == "Basic Fish")
         {
-            if(num == 6)
+            if(num == 5)
             {
                 gameManager.GetComponent<DoNotDestroy>().affinity -= 10;
             }
-            else if(num == 2 || num == 8 || num == 10)
+            else if(num == 1 || num == 7 || num == 9)
             {
                 gameManager.GetComponent<DoNotDestroy>().affinity += 5;
             }
-            else if(num == 3 || num == 12)
+            else if(num == 2 || num == 11)
             {
                 gameManager.GetComponent<DoNotDestroy>().affinity -= 5;
             }
         }
         else if(fishDateName == "Squid")
         {
-            if(num == 5 || num == 7 || num == 13)
+            if(num == 4 || num == 6 || num == 12)
             {
                 gameManager.GetComponent<DoNotDestroy>().affinity += 5;
             }
-            else if(num == 3 || num == 9 || num == 11)
+            else if(num == 2 || num == 8 || num == 10)
             {
                 gameManager.GetComponent<DoNotDestroy>().affinity -= 5;
             }
         }
         else if(fishDateName == "Swordfish")
         {
-            if(num == 5 || num == 8 || num == 10)
+            if(num == 4 || num == 7 || num == 9)
             {
                 gameManager.GetComponent<DoNotDestroy>().affinity += 5;
             }
-            else if(num == 3 || num == 7 || num == 11)
+            else if(num == 2 || num == 6 || num == 10)
             {
                 gameManager.GetComponent<DoNotDestroy>().affinity -= 5;
             }
