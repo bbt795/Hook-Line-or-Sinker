@@ -35,13 +35,13 @@ public class FishMove : MonoBehaviour
         {
             decisionTimeCount -= Time.deltaTime;
 
-            if (currentMoveDirection == 1)
-            {
-                spriteRenderer.flipX = true;
-            }
-            else if(currentMoveDirection == 2)
+            if (currentMoveDirection == 0)
             {
                 spriteRenderer.flipX = false;
+            }
+            else if(currentMoveDirection == 1)
+            {
+                spriteRenderer.flipX = true;
             }
         }
         else
