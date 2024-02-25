@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class TinderScript : MonoBehaviour
 {
@@ -19,17 +19,17 @@ public class TinderScript : MonoBehaviour
     void Start()
     {
 
-        Sprite basicFish1 = Resources.Load<Sprite>("Sprites/Fin-der Profiles/BasicFish1");
-        Sprite basicFish2 = Resources.Load<Sprite>("Sprites/Fin-der Profiles/BasicFish2");
-        Sprite basicFish3 = Resources.Load<Sprite>("Sprites/Fin-der Profiles/BasicFish3");
+        Sprite basicFish1 = Resources.Load<Sprite>("Fin-derProfiles/BasicFish1");
+        Sprite basicFish2 = Resources.Load<Sprite>("Fin-derProfiles/BasicFish2");
+        Sprite basicFish3 = Resources.Load<Sprite>("Fin-derProfiles/BasicFish3");
 
-        Sprite squid1 = Resources.Load<Sprite>("Sprites/Fin-der Profiles/Squid1");
-        Sprite squid2 = Resources.Load<Sprite>("Sprites/Fin-der Profiles/Squid2");
-        Sprite squid3 = Resources.Load<Sprite>("Sprites/Fin-der Profiles/Squid3");
+        Sprite squid1 = Resources.Load<Sprite>("Fin-derProfiles/Squid1");
+        Sprite squid2 = Resources.Load<Sprite>("Fin-derProfiles/Squid2");
+        Sprite squid3 = Resources.Load<Sprite>("Fin-derProfiles/Squid3");
 
-        Sprite swordfish1 = Resources.Load<Sprite>("Sprites/Fin-der Profiles/Swordfish1");
-        Sprite swordfish2 = Resources.Load<Sprite>("Sprites/Fin-der Profiles/Swordfish2");
-        Sprite swordfish3 = Resources.Load<Sprite>("Sprites/Fin-der Profiles/Swordfish3");
+        Sprite swordfish1 = Resources.Load<Sprite>("Fin-derProfiles/Swordfish1");
+        Sprite swordfish2 = Resources.Load<Sprite>("Fin-derProfiles/Swordfish2");
+        Sprite swordfish3 = Resources.Load<Sprite>("Fin-derProfiles/Swordfish3");
 
         spriteMap.Add("BasicFish1", basicFish1);
         spriteMap.Add("BasicFish2", basicFish2);
@@ -44,6 +44,15 @@ public class TinderScript : MonoBehaviour
         gameManager = GameObject.FindGameObjectWithTag("GameController");
         fishList = gameManager.GetComponent<DoNotDestroy>().fishList;
         fishDate = gameManager.GetComponent<DoNotDestroy>().fishDate;
+
+        Debug.Log(fishList[0]);
+
+        if(basicFish1 == null)
+        {
+
+            Debug.Log("Yup");
+
+        }
 
         profilePanel.GetComponent<Image>().sprite = spriteMap[fishList[0]];
 
@@ -87,6 +96,11 @@ public class TinderScript : MonoBehaviour
             fishDate = fishList[0];
             fishList.Clear();
             SceneManager.LoadScene("DatingGame");
+
+        } else
+        {
+
+            fishList.RemoveAt(0);
 
         }
 
