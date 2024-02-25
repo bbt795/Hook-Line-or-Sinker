@@ -12,7 +12,13 @@ public class DatingDialogueInt : MonoBehaviour
 {
     public GameObject gameManager;
     public string fishDateName;
+    public TextMeshProUGUI fishDialogueText;
+    public bool startOptions = true;
     public int currentDialogue = 2;
+    public int choiceIndex1;
+    public int choiceIndex2;
+    public int choiceIndex3;
+    public int choiceIndex4;
     public DialogueAsset questions;
     public DialogueAsset responses;
     public DialogueAsset player;
@@ -24,15 +30,22 @@ public class DatingDialogueInt : MonoBehaviour
     public GameObject Option4;
     //List of Option panels
     List<GameObject> options = new List<GameObject>();
+    List<int> choiceIndices = new List<int>();
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameController");
         fishDateName = gameManager.GetComponent<DoNotDestroy>().fishDate;
+        fishDialogueText = fishDialogue.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
         options.Add(Option1);
         options.Add(Option2);
         options.Add(Option3);
         options.Add(Option4);
+
+        choiceIndices.Add(choiceIndex1);
+        choiceIndices.Add(choiceIndex2);
+        choiceIndices.Add(choiceIndex3);
+        choiceIndices.Add(choiceIndex4);
 
         DialogueAsset basicFishQuestions = Resources.Load<DialogueAsset>("Dialogue/BasicBitchQuestions");
         DialogueAsset basicFishResponses = Resources.Load<DialogueAsset>("Dialogue/BasicBitchResponses");
@@ -76,7 +89,6 @@ public class DatingDialogueInt : MonoBehaviour
     public void StartDialogue()
     {
         TextMeshProUGUI fishNameText = fishDialogue.transform.Find("DialogueName").GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI fishDialogueText = fishDialogue.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
         fishNameText.text = fishDateName;
 
         fishDialogueText.text = questions.dialogue[0];
@@ -90,25 +102,89 @@ public class DatingDialogueInt : MonoBehaviour
         Option4.gameObject.SetActive(false);
 
     }
-
-    public void ChoiceOnClick()
+    public void OnClickOption1()
     {
-        ChoiceResponses();
-        foreach(GameObject option in options)
+        if(!startOptions)
         {
-            if(!option.gameObject.activeSelf)
-            {
-                option.SetActive(true);
-            }
-            TextMeshProUGUI optionText = option.GetComponentInChildren<TextMeshProUGUI>(false);
-            optionText.text = player.dialogue[currentDialogue];
-            currentDialogue++;
+            fishDialogueText.text = responses.dialogue[currentDialogue - 4];
         }
+        else
+        {
+            startOptions = false;
+            foreach(GameObject option in options)
+            {
+                if(!option.gameObject.activeSelf)
+                {
+                    option.SetActive(true);
+                }
+                TextMeshProUGUI optionText = option.GetComponentInChildren<TextMeshProUGUI>(false);
+                optionText.text = player.dialogue[currentDialogue];
+                currentDialogue++;
+            }
+        }
+        
 
     }
 
-    public void ChoiceResponses()
+    public void OnClickOption2()
     {
+        if(!startOptions)
+        {
+            fishDialogueText.text = responses.dialogue[currentDialogue - 3];
+        }
+        else
+        {
+            startOptions = false;
+            foreach(GameObject option in options)
+            {
+                if(!option.gameObject.activeSelf)
+                {
+                    option.SetActive(true);
+                }
+                TextMeshProUGUI optionText = option.GetComponentInChildren<TextMeshProUGUI>(false);
+                optionText.text = player.dialogue[currentDialogue];
+                currentDialogue++;
+            }
+        } 
+    }
+
+    public void OnClickOption3()
+    {
+        fishDialogueText.text = responses.dialogue[currentDialogue - 2];
+        
+    }
+
+    public void OnClickOption4()
+    {
+        fishDialogueText.text = responses.dialogue[currentDialogue - 1];
+    }
+
+    // public void ChoiceOnClick()
+    // {
+    //     //ChoiceResponses(lastDialogue);
+    //     int lastDialogue = currentDialogue - 1;
+    //     foreach(GameObject option in options)
+    //     {
+    //         if(!option.gameObject.activeSelf)
+    //         {
+    //             option.SetActive(true);
+    //         }
+    //         TextMeshProUGUI optionText = option.GetComponentInChildren<TextMeshProUGUI>(false);
+    //         optionText.text = player.dialogue[currentDialogue];
+    //         currentDialogue++;
+    //     }
+    //     foreach(int choice in choiceIndices)
+    //     {
+    //         choice = lastDialogue;
+    //         lastDialogue++;
+    //     }
+
+    // }
+
+    public void ChoiceResponses(int num)
+    {
+        //Add dialogue change based on option number?
+        //fishDialogueText.text = responses.dialogue[];
 
     }
 
