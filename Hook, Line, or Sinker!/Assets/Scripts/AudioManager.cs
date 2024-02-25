@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
 {
     public string sceneTitle;
     public string sceneTitle2;
+    public string sceneTitle3;
     public AudioSource source;
 
     public AudioClip[] audioClipArray;
@@ -39,6 +40,10 @@ public class AudioManager : MonoBehaviour
     void Update()
     {
         source = this.gameObject.GetComponent<AudioSource>();
+        if(SceneManager.GetActiveScene().name == sceneTitle3 && !dateStart)
+        {
+
+        }
 
         if (SceneManager.GetActiveScene().name == sceneTitle && !dateStart)
         {
