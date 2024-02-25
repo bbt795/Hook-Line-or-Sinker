@@ -7,6 +7,7 @@ public class MenuButtons : MonoBehaviour
 {
     public GameObject mainPanel;
     public GameObject instructionsPanel;
+    public GameObject creditsPanel;
 
     public void NewGame()
     {
@@ -26,6 +27,20 @@ public class MenuButtons : MonoBehaviour
         }
 
         instructionsPanel.SetActive(true);
+
+    }
+
+    public void Credits()
+    {
+
+        if (mainPanel.activeSelf == true)
+        {
+
+            mainPanel.SetActive(false);
+
+        }
+
+        creditsPanel.SetActive(true);
 
     }
 
