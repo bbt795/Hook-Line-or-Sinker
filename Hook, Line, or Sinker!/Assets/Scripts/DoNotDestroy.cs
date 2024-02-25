@@ -54,5 +54,14 @@ public class DoNotDestroy : MonoBehaviour
 
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+
+            Destroy(this.gameObject);
+
+            SceneManager.LoadScene("MainMenu");
+
+        }
+
     }
 }
