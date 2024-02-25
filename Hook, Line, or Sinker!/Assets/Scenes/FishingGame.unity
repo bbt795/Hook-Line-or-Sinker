@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7684,6 +7684,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 2070323675170993982, guid: c986779ea3c815941914e4cc68dd4057, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6872572043859293069, guid: c986779ea3c815941914e4cc68dd4057, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.68
@@ -7891,9 +7895,9 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 10
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: 0
   m_CullingMask:
@@ -13121,7 +13125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195072204966842157, guid: 44ec446f8ae1b48fb940f5eac850287e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5582607782557377362, guid: 44ec446f8ae1b48fb940f5eac850287e, type: 3}
       propertyPath: m_Mass
@@ -13129,7 +13133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5582607782557377362, guid: 44ec446f8ae1b48fb940f5eac850287e, type: 3}
       propertyPath: m_BodyType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
