@@ -13,17 +13,23 @@ MonoBehaviour:
   m_Name: BasicBitchResponses
   m_EditorClassIdentifier: 
   dialogue:
-  - My pleasure!
-  - You'll need to help foot the bill.
-  - I like swimming...
-  - Warrior Cats Roleplay on the GoodReads forums
-  - Skydiving is so much fun!
-  - Napping is the best!
-  - Sushi!
-  - Erm, I filter feed actually.
-  - I photosynthesize.
-  - Grilled cheese
-  - Codplay
-  - Bob Marlin
-  - Meghan Thee Sturgeon
-  - Marooned V
+  - Nice to meet you, thank you for taking me to dinner!
+  - Oh...
+  - So, what do you enjoy doing in your free time?
+  - Omg! Me too! We have so much in common!
+  - Um...interesting...*awkward fish smile*
+  - Can't say I've ever done it.
+  - How, original.
+  - Ok! Next question! What's your favorite food?
+  - '*Date end here*'
+  - I had a friend in high school who used to do that.
+  - So you're vegan! I am too! :D
+  - I don't think I know what grilled means...
+  - Last question! Which artist/group do you like most?
+  - '"I hear them all the time on FinTok!'
+  - I've heard of him, seems nice.
+  - Ugh, I can't stand rap
+  - I've heard good things, but they never landed with me.
+  - I think this went swimmingly! I'd love to get to know you more! What do you think?
+  - This was a nice date, gimme some fin! Oh, nevermind, uh, same time next week?
+  - I wouldn't be caught dead with you, don't contact me
