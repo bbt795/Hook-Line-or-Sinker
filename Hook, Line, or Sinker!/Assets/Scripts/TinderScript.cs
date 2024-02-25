@@ -12,6 +12,7 @@ public class TinderScript : MonoBehaviour
     public GameObject gameManager;
     public List<string> fishList;
     public string fishDate;
+    public GameObject rejectedText;
 
     Dictionary<string, Sprite> spriteMap = new Dictionary<string, Sprite>();
 
@@ -121,8 +122,7 @@ public class TinderScript : MonoBehaviour
 
             }
 
-            fishList.RemoveAt(0);
-            profilePanel.GetComponent<Image>().sprite = spriteMap[fishList[0]];
+            StartCoroutine(FailWait());
 
         }
 
@@ -135,6 +135,19 @@ public class TinderScript : MonoBehaviour
         fishList.Clear();
         SceneManager.LoadScene("FishingGame");
         
+
+    }
+
+    IEnumerator FailWait()
+    {
+
+        profilePanel.GetComponent<Image>().color = Color.red;
+        rejectedText.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        profilePanel.GetComponent<Image>().color = Color.white;
+        rejectedText.SetActive(false);
+        fishList.RemoveAt(0);
+        profilePanel.GetComponent<Image>().sprite = spriteMap[fishList[0]];
 
     }
 }
