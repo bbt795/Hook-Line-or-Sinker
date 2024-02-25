@@ -8,6 +8,7 @@ TagManager:
   - Squid
   - Swordfish
   - Ground
+  - GameMusic
   layers:
   - Default
   - TransparentFX
