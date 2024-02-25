@@ -44,6 +44,7 @@ public class EndGame : MonoBehaviour
     {
 
         Debug.Log(fishAffinity);
+        gameManager.GetComponent<DoNotDestroy>().affinity = 0;
         SceneManager.LoadScene("FishingGame");
 
     }
