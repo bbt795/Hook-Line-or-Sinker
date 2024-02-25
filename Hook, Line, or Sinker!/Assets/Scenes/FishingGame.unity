@@ -13016,7 +13016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 801492482342296049, guid: 44ec446f8ae1b48fb940f5eac850287e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.33
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 801492482342296049, guid: 44ec446f8ae1b48fb940f5eac850287e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13053,6 +13053,10 @@ PrefabInstance:
     - target: {fileID: 1195072204966842157, guid: 44ec446f8ae1b48fb940f5eac850287e, type: 3}
       propertyPath: m_Name
       value: HookPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5582607782557377362, guid: 44ec446f8ae1b48fb940f5eac850287e, type: 3}
+      propertyPath: m_Constraints
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5961725073908524531, guid: 44ec446f8ae1b48fb940f5eac850287e, type: 3}
       propertyPath: hookCamera
