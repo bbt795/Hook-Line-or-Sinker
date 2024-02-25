@@ -14,6 +14,7 @@ public class DoNotDestroy : MonoBehaviour
     public int swordCount = 0;
     public int affinity;
 
+
     private void Awake(){
         GameObject[] gameManagerObj = GameObject.FindGameObjectsWithTag("GameController");
 
