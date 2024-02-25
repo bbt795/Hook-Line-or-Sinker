@@ -69,6 +69,15 @@ public class TinderScript : MonoBehaviour
     public void SwipeLeft()
     {
 
+        if (fishList.Count == 1)
+        {
+
+            fishList.Clear();
+            profilePanel.SetActive(false);
+            return;
+
+        }
+
         fishList.RemoveAt(0);
         profilePanel.GetComponent<Image>().sprite = spriteMap[fishList[0]];
 
@@ -100,7 +109,17 @@ public class TinderScript : MonoBehaviour
         } else
         {
 
+            if(fishList.Count == 1)
+            {
+
+                fishList.Clear();
+                profilePanel.SetActive(false);
+                return;
+
+            }
+
             fishList.RemoveAt(0);
+            profilePanel.GetComponent<Image>().sprite = spriteMap[fishList[0]];
 
         }
 
@@ -109,8 +128,10 @@ public class TinderScript : MonoBehaviour
     public void SwipeDown()
     {
 
+        Debug.Log("Swiped Down");
         fishList.Clear();
         SceneManager.LoadScene("FishingGame");
+        
 
     }
 }
