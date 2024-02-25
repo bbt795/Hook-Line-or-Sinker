@@ -9,6 +9,8 @@ TagManager:
   - Swordfish
   - Ground
   - GameMusic
+  - MenuGameMusic
+  - DateGameMusic
   layers:
   - Default
   - TransparentFX
