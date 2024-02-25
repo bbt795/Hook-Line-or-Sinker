@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class HookFishing : MonoBehaviour
 {
+    public Camera hookCamera;
     public Animator myAnim;
     public SpriteRenderer myRenderer;
     public Rigidbody2D myRig;
@@ -39,7 +40,8 @@ public class HookFishing : MonoBehaviour
             //myRig.velocity *= -1f;
         }
         Vector2 mousePosition = Mouse.current.position.ReadValue();
-        Vector2 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        Vector2 worldMousePosition = hookCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         transform.position = new Vector2(worldMousePosition.x, transform.position.y);
+        Debug.Log(worldMousePosition.x);
     }
 }
