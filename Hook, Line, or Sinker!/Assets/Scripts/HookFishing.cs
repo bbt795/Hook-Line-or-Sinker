@@ -11,7 +11,7 @@ public class HookFishing : MonoBehaviour
     public SpriteRenderer myRenderer;
     public Rigidbody2D myRig;
     public Collider2D boxCollider;
-    public float speed = 2f;
+    public float speed = 3f;
     public bool isReversing = false;
     public bool mouseMove = true;
     public float targetYPosition = -38.5f; 
