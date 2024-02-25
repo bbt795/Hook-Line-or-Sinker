@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c896c7d15f0eb47bbbd1d9cd2357e1, type: 3}
+  m_Name: Eccentric Squid
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Good morrow! Our paths have crossed and its a pleasure to finally meet you.
+  - The song of my soul is calling me elsewhere...
+  - Praytell, for your artist of choice, who ignites the creative spark in your soul?
+  - I see your soul is easily swayed by the masses.
+  - My hearts never quite resonated with her.
+  - His art has been the inspiration for many great pieces.
+  - Your taste in art defies the Squid Pro Quo.
+  - If you could paint your lifes story, what colors would dominate the canvas?
+  - The most passionate and basic color to ever grace the rainbow.
+  - It represents both everything and nothing, and that's something I relate to.
+  - Like the lush seaweed whos embrace hints at a natural high and an earthly ecstasy.
+  - An overwhelming color that plagues my life. I can never escape its constant presence.
+  - To bring our amorous meeting to a close, what would you title this fateful encounter?
+  - It's because I'm a squid isn't it.
+  - A vast and unfathomable prison that confines my soul eternally to its greedy
+    depths. Such a cruel fate...
+  - Forbidden love is the bittersweet melody that transcends barriers to reveal that
+    love knows boundaries.
+  - Our chemistry gives me hope that a dreamer like myself can break free from a
+    prison once thought impossible.
+  - We must be soulmates, there is no such thing as a coincidence in the pursuit
+    of love!
+  - I'll ink about a future encounter, give me some time to swim through the currents
+    of inspiration.
+  - Regrettably, the tides of fate have pushed us in opposite directions, we were
+    not meant to be.

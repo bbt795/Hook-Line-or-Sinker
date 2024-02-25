@@ -12,4 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20c896c7d15f0eb47bbbd1d9cd2357e1, type: 3}
   m_Name: SquidResponses
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - Pleasure's all mine.
+  - Erm...English please?
+  - Vincent van Goldfish
+  - Frida Khalo-mari
+  - Leonardo da Fischi
+  - Salvador Dalphin
+  - Red
+  - Black
+  - Green
+  - Blue
+  - Ink-Stained Reverie
+  - Ocean's Embrace
+  - Forbidden Rendevous
+  - Dreamers Prison Break

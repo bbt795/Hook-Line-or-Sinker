@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - Nice to meet you, thank you for taking me to dinner!
+  - Oh...
   - So, what do you enjoy doing in your free time?
   - Omg! Me too! We have so much in common!
   - Um...interesting...*awkward fish smile*
@@ -32,4 +33,3 @@ MonoBehaviour:
   - I think this went swimmingly! I'd love to get to know you more! What do you think?
   - This was a nice date, gimme some fin! Oh, nevermind, uh, same time next week?
   - I wouldn't be caught dead with you, don't contact me
-  - Oh...

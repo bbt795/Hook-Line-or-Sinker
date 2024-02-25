@@ -10,26 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20c896c7d15f0eb47bbbd1d9cd2357e1, type: 3}
-  m_Name: Eccentric Squid
+  m_Name: BasicBitchResponses
   m_EditorClassIdentifier: 
   dialogue:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - My pleasure!
+  - You'll need to help foot the bill.
+  - I like swimming...
+  - Warrior Cats Roleplay on the GoodReads forums
+  - Skydiving is so much fun!
+  - Napping is the best!
+  - Sushi!
+  - Erm, I filter feed actually.
+  - I photosynthesize.
+  - Grilled cheese
+  - Codplay
+  - Bob Marlin
+  - Meghan Thee Sturgeon
+  - Marooned V
