@@ -259,7 +259,7 @@ public class DatingDialogueInt : MonoBehaviour
         {
             fishDialogueText.text = responses.dialogue[15];
         }
-        else if(affinity > 0 && affinity < 15 && endOptions)
+        else if(affinity >= 0 && affinity < 15 && endOptions)
         {
             fishDialogueText.text = responses.dialogue[14];
         }
