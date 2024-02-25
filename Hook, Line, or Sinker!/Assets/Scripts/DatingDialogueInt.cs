@@ -44,14 +44,17 @@ public class DatingDialogueInt : MonoBehaviour
         
         if(fishDateName.StartsWith("BasicFish"))
         {
+            fishDateName = "Basic Fish";
             StartDialogue(basicFishQuestions, basicFishResponses, basicFishPlayer);
         }
         else if(fishDateName.StartsWith("Squid"))
         {
+            fishDateName = "Squid";
             StartDialogue(eccentricSquidQuestions, eccentricSquidResponses, eccentricSquidPlayer);
         }
         else if(fishDateName.StartsWith("Swordfish"))
         {
+            fishDateName = "Swordfish";
             StartDialogue(swordfishQuestions, swordfishResponses, swordfishPlayer);
         }
         
@@ -64,6 +67,11 @@ public class DatingDialogueInt : MonoBehaviour
         fishNameText.text = fishDateName;
 
         fishDialogueText.text = questions.dialogue[0];
+
+        TextMeshProUGUI option1Text = Option1.GetComponentInChildren<TextMeshProUGUI>(false);
+        TextMeshProUGUI option2Text = Option2.GetComponentInChildren<TextMeshProUGUI>(false);
+        option1Text.text = player.dialogue[0];
+        option2Text.text = player.dialogue[1];
 
     }
 
