@@ -12,6 +12,10 @@ public class DatingDialogueInt : MonoBehaviour
 {
     public GameObject gameManager;
     public string fishDateName;
+    public int currentDialogue = 2;
+    public DialogueAsset questions;
+    public DialogueAsset responses;
+    public DialogueAsset player;
     //All Dialogue panels
     public GameObject fishDialogue;
     public GameObject Option1;
@@ -45,22 +49,31 @@ public class DatingDialogueInt : MonoBehaviour
         if(fishDateName.StartsWith("BasicFish"))
         {
             fishDateName = "Basic Fish";
-            StartDialogue(basicFishQuestions, basicFishResponses, basicFishPlayer);
+            questions = basicFishQuestions;
+            responses = basicFishResponses;
+            player = basicFishPlayer;
+            StartDialogue();
         }
         else if(fishDateName.StartsWith("Squid"))
         {
             fishDateName = "Squid";
-            StartDialogue(eccentricSquidQuestions, eccentricSquidResponses, eccentricSquidPlayer);
+            questions = eccentricSquidQuestions;
+            responses = eccentricSquidResponses;
+            player = eccentricSquidPlayer;
+            StartDialogue();
         }
         else if(fishDateName.StartsWith("Swordfish"))
         {
             fishDateName = "Swordfish";
-            StartDialogue(swordfishQuestions, swordfishResponses, swordfishPlayer);
+            questions = swordfishQuestions;
+            responses = swordfishResponses;
+            player = swordfishPlayer;
+            StartDialogue();
         }
         
     }
 
-    public void StartDialogue(DialogueAsset questions, DialogueAsset responses, DialogueAsset player)
+    public void StartDialogue()
     {
         TextMeshProUGUI fishNameText = fishDialogue.transform.Find("DialogueName").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI fishDialogueText = fishDialogue.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
@@ -80,7 +93,23 @@ public class DatingDialogueInt : MonoBehaviour
 
     public void ChoiceOnClick()
     {
-        
+        ChoiceResponses();
+        foreach(GameObject option in options)
+        {
+            if(!option.gameObject.activeSelf)
+            {
+                option.SetActive(true);
+            }
+            TextMeshProUGUI optionText = option.GetComponentInChildren<TextMeshProUGUI>(false);
+            optionText.text = player.dialogue[currentDialogue];
+            currentDialogue++;
+        }
+
+    }
+
+    public void ChoiceResponses()
+    {
+
     }
 
     // Update is called once per frame
