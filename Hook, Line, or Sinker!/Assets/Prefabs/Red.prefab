@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2897219019006291038}
   - component: {fileID: 4533745199237923619}
   - component: {fileID: -6961555002910074944}
+  - component: {fileID: -5414464551399294652}
   m_Layer: 0
   m_Name: Red
   m_TagString: Untagged
@@ -142,3 +143,28 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &-5414464551399294652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4224824453805760681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c9a7ca0cf414b749bc981a4dc400099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisTransform: {fileID: 2968700009888404441}
+  moveSpeed: 0.5
+  decisionTime: {x: 1, y: 4}
+  decisionTimeCount: 0
+  moveDirections:
+  - {x: 1, y: 0, z: 0}
+  - {x: -1, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  currentMoveDirection: 0
+  spriteRenderer: {fileID: 2897219019006291038}

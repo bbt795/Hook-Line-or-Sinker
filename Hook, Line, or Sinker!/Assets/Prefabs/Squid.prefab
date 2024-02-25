@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8390557709251921119}
   - component: {fileID: 6292421015944694612}
   - component: {fileID: 3847467099524894270}
+  - component: {fileID: -3549638464422494454}
   m_Layer: 0
   m_Name: Squid
   m_TagString: Untagged
@@ -142,3 +143,28 @@ CircleCollider2D:
   m_Offset: {x: 0.021911066, y: -0.0087645855}
   serializedVersion: 2
   m_Radius: 0.32908964
+--- !u!114 &-3549638464422494454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888765918064033558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c9a7ca0cf414b749bc981a4dc400099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisTransform: {fileID: 5585216863913642061}
+  moveSpeed: 0.7
+  decisionTime: {x: 1, y: 4}
+  decisionTimeCount: 0
+  moveDirections:
+  - {x: 1, y: 0, z: 0}
+  - {x: -1, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  currentMoveDirection: 0
+  spriteRenderer: {fileID: 8390557709251921119}

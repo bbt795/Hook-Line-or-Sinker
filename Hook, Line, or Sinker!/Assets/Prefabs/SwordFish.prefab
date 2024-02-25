@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5691799276639417043}
   - component: {fileID: 6003135275711970334}
   - component: {fileID: 837374483560264813}
+  - component: {fileID: -40755772075233770}
   m_Layer: 0
   m_Name: SwordFish
   m_TagString: Untagged
@@ -142,3 +143,28 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.49999997
+--- !u!114 &-40755772075233770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054812074615850898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c9a7ca0cf414b749bc981a4dc400099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisTransform: {fileID: 1031239924395078478}
+  moveSpeed: 0.9
+  decisionTime: {x: 1, y: 4}
+  decisionTimeCount: 0
+  moveDirections:
+  - {x: 1, y: 0, z: 0}
+  - {x: -1, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  currentMoveDirection: 0
+  spriteRenderer: {fileID: 5691799276639417043}

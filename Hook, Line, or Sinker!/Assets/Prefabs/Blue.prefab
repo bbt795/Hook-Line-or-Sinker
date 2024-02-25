@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4710192468601271306}
   - component: {fileID: 8012197476141503063}
   - component: {fileID: -5575684355580954702}
+  - component: {fileID: 7158430684802023471}
   m_Layer: 0
   m_Name: Blue
   m_TagString: Untagged
@@ -142,3 +143,28 @@ CircleCollider2D:
   m_Offset: {x: -0.0178382, y: -0.03570652}
   serializedVersion: 2
   m_Radius: 0.3490368
+--- !u!114 &7158430684802023471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070323675170993982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c9a7ca0cf414b749bc981a4dc400099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisTransform: {fileID: 6872572043859293069}
+  moveSpeed: 0.2
+  decisionTime: {x: 1, y: 4}
+  decisionTimeCount: 0
+  moveDirections:
+  - {x: 1, y: 0, z: 0}
+  - {x: -1, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  currentMoveDirection: 0
+  spriteRenderer: {fileID: 4710192468601271306}
