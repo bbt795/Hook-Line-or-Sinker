@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6003135275711970334}
   - component: {fileID: 837374483560264813}
   - component: {fileID: -40755772075233770}
+  - component: {fileID: -8177253491082877822}
   m_Layer: 0
   m_Name: SwordFish
   m_TagString: Swordfish
@@ -169,3 +170,30 @@ MonoBehaviour:
   currentMoveDirection: 0
   spriteRenderer: {fileID: 5691799276639417043}
   circleCollider: {fileID: 837374483560264813}
+--- !u!50 &-8177253491082877822
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054812074615850898}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
