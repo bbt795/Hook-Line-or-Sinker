@@ -113,6 +113,10 @@ public class DatingDialogueInt : MonoBehaviour
         Option2.gameObject.SetActive(false);
         Option3.gameObject.SetActive(false);
         Option4.gameObject.SetActive(false);
+        if(currentQuestion == 3)
+        {
+            endOptions = true;
+        }
 
     }
     public void OnClickOption1()
