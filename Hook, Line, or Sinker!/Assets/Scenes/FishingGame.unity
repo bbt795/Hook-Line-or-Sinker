@@ -7778,11 +7778,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6828b7bf8add0417b81c90175f03656a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tinderScene: 
+  tinderScene: TinderGame
   speed: 3
   isReversing: 0
   targetYPosition: -38.5
-  changeYPosition: 4
+  changeYPosition: 3
 --- !u!1 &1969290470
 GameObject:
   m_ObjectHideFlags: 0
