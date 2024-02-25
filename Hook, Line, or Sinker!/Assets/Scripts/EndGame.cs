@@ -9,6 +9,7 @@ public class EndGame : MonoBehaviour
 
     public GameObject gameOverPanel;
     public GameObject gameManager;
+    public GameObject audioManager;
     private int fishAffinity;
 
     // Start is called before the first frame update
@@ -16,6 +17,8 @@ public class EndGame : MonoBehaviour
     {
 
         gameManager = GameObject.FindGameObjectWithTag("GameController");
+        audioManager = GameObject.FindGameObjectWithTag("GameMusic");
+
         fishAffinity = gameManager.GetComponent<DoNotDestroy>().affinity;
 
         if(fishAffinity == 15)
@@ -45,6 +48,7 @@ public class EndGame : MonoBehaviour
 
         Debug.Log(fishAffinity);
         gameManager.GetComponent<DoNotDestroy>().affinity = 0;
+        audioManager.GetComponent<AudioManager>().dateStart = false;
         SceneManager.LoadScene("FishingGame");
 
     }
