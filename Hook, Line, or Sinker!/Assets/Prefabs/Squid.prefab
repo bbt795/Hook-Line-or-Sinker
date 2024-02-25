@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3549638464422494454}
   m_Layer: 0
   m_Name: Squid
-  m_TagString: Untagged
+  m_TagString: Squid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,3 +168,4 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   currentMoveDirection: 0
   spriteRenderer: {fileID: 8390557709251921119}
+  circleCollider: {fileID: 3847467099524894270}

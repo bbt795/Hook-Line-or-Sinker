@@ -15,6 +15,8 @@ public class FishMove : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
 
+    public Collider2D circleCollider;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,5 +55,14 @@ public class FishMove : MonoBehaviour
     void ChooseMoveDirection()
     {
         currentMoveDirection = Mathf.FloorToInt(Random.Range(0, moveDirections.Length));
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.name == "Ground")
+        {
+            //Output the message
+            Debug.Log("hit a wall");
+        }
     }
 }

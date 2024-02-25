@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7281981019033515893}
   m_Layer: 0
   m_Name: Orange
-  m_TagString: Untagged
+  m_TagString: Fish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,3 +168,4 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   currentMoveDirection: 0
   spriteRenderer: {fileID: 8262421335174676137}
+  circleCollider: {fileID: 6350395459528415773}
