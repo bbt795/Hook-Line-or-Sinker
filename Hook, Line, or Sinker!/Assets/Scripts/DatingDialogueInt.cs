@@ -151,8 +151,7 @@ public class DatingDialogueInt : MonoBehaviour
         }
         else
         {
-            CheckAffinity(currentDialogue - 5);
-            InBetweenDialogue(currentDialogue - 5);  
+            CheckAffinity(currentDialogue - 5); 
         }
         
 
@@ -168,21 +167,18 @@ public class DatingDialogueInt : MonoBehaviour
         else
         {
             CheckAffinity(currentDialogue - 4);
-            InBetweenDialogue(currentDialogue - 4);
         }
         
     }
 
     public void OnClickOption3()
     {
-        CheckAffinity(currentDialogue - 3);
-        InBetweenDialogue(currentDialogue - 3);        
+        CheckAffinity(currentDialogue - 3);     
     }
 
     public void OnClickOption4()
     {
         CheckAffinity(currentDialogue - 2);
-        InBetweenDialogue(currentDialogue - 2);
     }
 
     public void CheckAffinity(int num)
@@ -191,7 +187,7 @@ public class DatingDialogueInt : MonoBehaviour
         {
             if(num == 5)
             {
-                gameManager.GetComponent<DoNotDestroy>().affinity -= 10;
+                gameManager.GetComponent<DoNotDestroy>().affinity = -10;
             }
             else if(num == 1 || num == 7 || num == 9)
             {
@@ -227,6 +223,10 @@ public class DatingDialogueInt : MonoBehaviour
         if(gameManager.GetComponent<DoNotDestroy>().affinity == -10 || endOptions)
         {
             DateEnd();
+        }
+        else
+        {
+            InBetweenDialogue(num);
         }
         //Add dialogue change based on option number?
         //fishDialogueText.text = responses.dialogue[];
