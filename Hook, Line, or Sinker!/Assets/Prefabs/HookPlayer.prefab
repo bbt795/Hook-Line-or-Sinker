@@ -125,6 +125,7 @@ MonoBehaviour:
   myAnim: {fileID: 0}
   myRenderer: {fileID: 0}
   myRig: {fileID: 0}
+  boxCollider: {fileID: 163290378123865977}
   speed: 5
   isReversing: 0
   targetYPosition: -38.5
