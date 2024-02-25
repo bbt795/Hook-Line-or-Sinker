@@ -5,19 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: e5d7e9aca44531f4da49ee039cfa08fc
   - enabled: 1
     path: Assets/Scenes/FishingGame.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TinderGame.unity
     guid: 7cd134949126776438bba6bb131d3569
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/DatingGame.unity
     guid: 0113b6307459f4e4f9367b44e8fd0d71
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 748476ba009e95046bae6c5e4a6e46ef
   m_configObjects: {}

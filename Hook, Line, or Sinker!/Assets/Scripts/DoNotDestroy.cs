@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class DoNotDestroy : MonoBehaviour
 {
+
+    public List<string> fishList = new List<string>();
+    public string fishDate;
+
     private void Awake(){
         GameObject[] gameManagerObj = GameObject.FindGameObjectsWithTag("GameController");
 
