@@ -22,7 +22,8 @@ public class HookFishing : MonoBehaviour
         myAnim = this.GetComponent<Animator>();
         myRenderer = this.GetComponent<SpriteRenderer>();
         myRig = this.GetComponent<Rigidbody2D>();
-        gameManager = GameObject.FindGameObjectWithTag("GameController");        
+        gameManager = GameObject.FindGameObjectWithTag("GameController");
+        
     }
 
     private void OnCollisionEnter2D(Collision2D other)
