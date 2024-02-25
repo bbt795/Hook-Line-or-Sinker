@@ -140,13 +140,14 @@ public class DatingDialogueInt : MonoBehaviour
                     optionText.text = player.dialogue[currentDialogue];
                     currentDialogue++;
                 }
+                currentQuestion++;
+                fishDialogueText.text = questions.dialogue[currentQuestion];
             }
             else
             {
                 DateEnd();
             }  
-            currentQuestion++;
-            fishDialogueText.text = questions.dialogue[currentQuestion];
+            
         }
         else
         {
