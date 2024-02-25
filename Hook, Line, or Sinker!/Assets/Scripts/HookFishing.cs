@@ -23,7 +23,6 @@ public class HookFishing : MonoBehaviour
         myRenderer = this.GetComponent<SpriteRenderer>();
         myRig = this.GetComponent<Rigidbody2D>();
         gameManager = GameObject.FindGameObjectWithTag("GameController");
-        Debug.Log(gameManager.GetComponent<DoNotDestroy>().fishAffinity);
         
     }
 
