@@ -10,7 +10,7 @@ public class FishMove : MonoBehaviour
     public Vector2 decisionTime = new Vector2(1, 4);
     public float decisionTimeCount = 0;
 
-    public Vector3[] moveDirections = new Vector3[] { Vector3.right, Vector3.left, Vector3.forward, Vector3.back, Vector3.zero, Vector3.zero };
+    public Vector2[] moveDirections = new Vector2[] { Vector2.right, Vector2.left, Vector2.up, Vector2.down, Vector2.zero, Vector2.zero };
     public int currentMoveDirection;
 
     public SpriteRenderer spriteRenderer;
@@ -29,7 +29,7 @@ public class FishMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        thisTransform.position += moveDirections[currentMoveDirection] * Time.deltaTime * moveSpeed;
+        thisTransform.position += (Vector3)moveDirections[currentMoveDirection] * Time.deltaTime * moveSpeed;
 
         if (decisionTimeCount > 0)
         {
