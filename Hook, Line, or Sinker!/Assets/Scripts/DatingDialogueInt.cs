@@ -12,6 +12,7 @@ public class DatingDialogueInt : MonoBehaviour
 {
     public GameObject gameManager;
     public string fishDateName;
+    public string endScene;
     public TextMeshProUGUI fishDialogueText;
     public bool startOptions = true;
     public bool endOptions = false;
@@ -117,25 +118,6 @@ public class DatingDialogueInt : MonoBehaviour
     public void OnClickOption1()
     {
         TextMeshProUGUI optionInitialText = Option1.GetComponentInChildren<TextMeshProUGUI>(false);
-        // if(!startOptions)
-        // {
-        //     //CheckAffinity(currentDialogue - 5);
-        //     fishDialogueText.text = responses.dialogue[currentDialogue - 5];
-        // }
-        // else if()
-        // {
-        //     startOptions = false;
-        //     foreach(GameObject option in options)
-        //     {
-        //         if(!option.gameObject.activeSelf)
-        //         {
-        //             option.SetActive(true);
-        //         }
-        //         TextMeshProUGUI optionText = option.GetComponentInChildren<TextMeshProUGUI>(false);
-        //         optionText.text = player.dialogue[currentDialogue];
-        //         currentDialogue++;
-        //     }
-        // }
         if(optionInitialText.text == "Continue" || startOptions)
         {
             if(startOptions)
@@ -144,6 +126,10 @@ public class DatingDialogueInt : MonoBehaviour
             }
             currentQuestion++;
             fishDialogueText.text = questions.dialogue[currentQuestion];
+            if (currentQuestion == 3)
+            {
+                endOptions = true;
+            }
             foreach(GameObject option in options)
             {
                 if(!option.gameObject.activeSelf)
@@ -166,26 +152,16 @@ public class DatingDialogueInt : MonoBehaviour
 
     public void OnClickOption2()
     {
-        // if(!startOptions)
-        // {
-        //     //CheckAffinity(currentDialogue - 4);
-        //     InBetweenDialogue(currentDialogue - 4);
-        // }
-        // else
-        // {
-        //     startOptions = false;
-        //     foreach(GameObject option in options)
-        //     {
-        //         if(!option.gameObject.activeSelf)
-        //         {
-        //             option.SetActive(true);
-        //         }
-        //         TextMeshProUGUI optionText = option.GetComponentInChildren<TextMeshProUGUI>(false);
-        //         optionText.text = player.dialogue[currentDialogue];
-        //         currentDialogue++;
-        //     }
-        // } 
-        InBetweenDialogue(currentDialogue - 4);
+        if(startOptions)
+        {
+            gameManager.GetComponent<DoNotDestroy>().affinity = -10;
+            DateEnd();
+        }
+        else
+        {
+            InBetweenDialogue(currentDialogue - 4);
+        }
+        
     }
 
     public void OnClickOption3()
@@ -276,25 +252,37 @@ public class DatingDialogueInt : MonoBehaviour
 
     }
 
+    public IEnumerator EndCoroutine()
+    {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(endScene);
+    }
+
     public void DateEnd()
     {
         int affinity = gameManager.GetComponent<DoNotDestroy>().affinity;
-        if(affinity == 15)
+        Option1.gameObject.SetActive(false);
+        Option2.gameObject.SetActive(false);
+        Option3.gameObject.SetActive(false);
+        Option4.gameObject.SetActive(false);
+
+        if(affinity == 15 && endOptions)
         {
-            fishDialogueText.text = player.dialogue[13];
+            fishDialogueText.text = responses.dialogue[13];
         }
-        else if(affinity == -10)
+        else if(affinity == -10 && !endOptions)
         {
-            fishDialogueText.text = player.dialogue[0];
+            fishDialogueText.text = responses.dialogue[0];
         }
-        else if(affinity < 0 && affinity > -10 && endOptions)
+        else if(affinity < 0 && affinity >= -10 && endOptions)
         {
-            fishDialogueText.text = player.dialogue[15];
+            fishDialogueText.text = responses.dialogue[15];
         }
         else if(affinity > 0 && affinity < 15 && endOptions)
         {
-            fishDialogueText.text = player.dialogue[14];
+            fishDialogueText.text = responses.dialogue[14];
         }
+        StartCoroutine(EndCoroutine());
     }
 
     // Update is called once per frame
