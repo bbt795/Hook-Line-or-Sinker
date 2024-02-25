@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class HookFishing : MonoBehaviour
 {
     public Camera hookCamera;
+    public GameObject gameManager;
     public Animator myAnim;
     public SpriteRenderer myRenderer;
     public Rigidbody2D myRig;
@@ -21,22 +22,29 @@ public class HookFishing : MonoBehaviour
         myAnim = this.GetComponent<Animator>();
         myRenderer = this.GetComponent<SpriteRenderer>();
         myRig = this.GetComponent<Rigidbody2D>();
+        gameManager = GameObject.FindGameObjectWithTag("GameController");
         
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Ground"))
+        if(other.gameObject.CompareTag("Fish"))
         {
-            mouseMove = false;
+            FishMove otherObject = other.gameObject.GetComponent<FishMove>();
+            gameManager.GetComponent<DoNotDestroy>().fishCount += 1;
+            Destroy(otherObject.gameObject);
         }
-    }
-
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if(other.gameObject.CompareTag("Ground"))
+        else if(other.gameObject.CompareTag("Squid"))
         {
-            mouseMove = true;
+            FishMove otherObject = other.gameObject.GetComponent<FishMove>();
+            gameManager.GetComponent<DoNotDestroy>().squidCount += 1;
+            Destroy(otherObject.gameObject);
+        }
+        else if(other.gameObject.CompareTag("Swordfish"))
+        {
+            FishMove otherObject = other.gameObject.GetComponent<FishMove>();
+            gameManager.GetComponent<DoNotDestroy>().swordCount += 1;
+            Destroy(otherObject.gameObject);
         }
     }
 
