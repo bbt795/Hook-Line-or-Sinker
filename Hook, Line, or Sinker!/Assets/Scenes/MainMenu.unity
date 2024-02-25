@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1357,11 +1357,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneTitle: DatingGame
   sceneTitle2: TinderGame
+  sceneTitle3: 
   source: {fileID: 1068842003}
   audioClipArray:
   - {fileID: 8300000, guid: 498292686e6a1cf4d84c810dd8c7b410, type: 3}
   - {fileID: 8300000, guid: 5acc3b7d3e3b80e4bb4497305fe54fe2, type: 3}
   - {fileID: 8300000, guid: 765830141aafd754293e5e53862ccf0c, type: 3}
+  - {fileID: 8300000, guid: a6f940e84ea465f43a82b18e414d33b6, type: 3}
   gameManager: {fileID: 0}
   fishList: []
   fishDate: 
