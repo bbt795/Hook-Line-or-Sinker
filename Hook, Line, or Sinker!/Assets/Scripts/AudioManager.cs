@@ -24,6 +24,7 @@ public class AudioManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        source.volume = 0.15f;
 
         DontDestroyOnLoad(this.gameObject);
     }
@@ -50,30 +51,27 @@ public class AudioManager : MonoBehaviour
             if (fishDate.StartsWith("Squid"))
             {
                 source.clip = audioClipArray[0];
+                source.volume = 0.15f;
                 dateStart = true;
                 source.PlayOneShot(source.clip);
 
             }
             else if (fishDate.StartsWith("BasicFish"))
             {
-
                 source.clip = audioClipArray[1];
+                source.volume = 0.15f;
                 dateStart = true;
                 source.PlayOneShot(source.clip);
-
             }
             else if (fishDate.StartsWith("Swordfish"))
             {
-
                 source.clip = audioClipArray[2];
+                source.volume = 0.15f;
                 dateStart = true;
                 source.PlayOneShot(source.clip);
 
             }
         }
-
-        //gameManager.GetComponent<DoNotDestroy>().fishDate = fishDate;
-
-        
+       
     }
 }
