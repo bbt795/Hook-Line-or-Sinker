@@ -73,6 +73,14 @@ public class DatingDialogueInt : MonoBehaviour
         option1Text.text = player.dialogue[0];
         option2Text.text = player.dialogue[1];
 
+        Option3.gameObject.SetActive(false);
+        Option4.gameObject.SetActive(false);
+
+    }
+
+    public void ChoiceOnClick()
+    {
+        
     }
 
     // Update is called once per frame
