@@ -200,6 +200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 758a096667bb54d8b9d5eb4f9e5ad713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fishCount: 0
+  squidCount: 0
+  swordCount: 0
 --- !u!4 &89735221
 Transform:
   m_ObjectHideFlags: 0
@@ -7654,7 +7657,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.023049891}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7665,7 +7668,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.9539002}
   m_EdgeRadius: 0
 --- !u!1 &1772468114
 GameObject:
