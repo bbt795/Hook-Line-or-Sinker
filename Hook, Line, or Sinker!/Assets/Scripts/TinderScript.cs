@@ -67,10 +67,28 @@ public class TinderScript : MonoBehaviour
 
     public void SwipeRight()
     {
+        if (fishList[0].StartsWith("Squid") && Random.value >= 0.5)
+        {
 
-        fishDate = fishList[0];
-        fishList.Clear();
-        SceneManager.LoadScene("DatingGame");
+            fishDate = fishList[0];
+            fishList.Clear();
+            SceneManager.LoadScene("DatingGame");
+
+        }else if (fishList[0].StartsWith("BasicFish") && Random.value <= 0.25)
+        {
+
+            fishDate = fishList[0];
+            fishList.Clear();
+            SceneManager.LoadScene("DatingGame");
+
+        } else if (fishList[0].StartsWith("Swordfish") && Random.value >= 0.25)
+        {
+
+            fishDate = fishList[0];
+            fishList.Clear();
+            SceneManager.LoadScene("DatingGame");
+
+        }
 
     }
 
